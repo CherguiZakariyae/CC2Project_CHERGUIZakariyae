@@ -1,0 +1,26 @@
+nav class="navbar navbar-light bg-danger">
+  <a class="navbar-brand" href="javascript:void(0)"
+    >Panier<span class="badge badge-secondary">{{ badge }}</span></a
+  >
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-3" *ngFor="let item of cars">
+      <img [src]="item.image" alt="" srcset="" />
+
+      <p>
+        {{ item.nImatriculation }}
+      </p>
+
+      
+
+      <button
+        class="btn btn-primary d-block m-auto"
+        (click)="goToCarDetail(item)"
+      >
+        Commander
+      </button>
+    </div>
+  </div>
+</div>
